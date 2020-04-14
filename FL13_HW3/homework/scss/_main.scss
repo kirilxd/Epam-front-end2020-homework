@@ -1,0 +1,238 @@
+// Write your styles here
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: $textColor;
+}
+
+@mixin flexCenter($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin button {
+    background-color: $buttonColor;
+    border: none;
+    width: 175px;
+    height: 60px;
+    color: white;
+    font-size: 20px;
+    font-weight: map-get($font-weights, medium);
+}
+
+@mixin link {
+    color: white;
+}
+
+body {
+    background-color: $backgroundColor;
+}
+
+.header {
+    background-image: $backgroundHeaderImage;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    border-bottom-right-radius: 550px 280px;
+
+    &-wrap {
+        margin: 25px 180px;
+    }
+
+    .landing-logo {
+        display: flex;
+        align-items: center;
+
+        span {
+            display: block;
+        }
+
+        img {
+            width: 55px;
+            height: 55px;
+            margin-right: 25px;
+        }
+    }
+
+    &_heading {
+        font-size: 70px;
+        margin-right: 1000px;
+        font-weight: map-get($font-weights, bold);
+        margin-top: 105px;
+        position: relative;
+        z-index: 0;
+
+        &::after {
+            content: "";
+            background-color: $highlightColor;
+            width: 280px;
+            height: 50px;
+            position: absolute;
+            right: 230px;
+            top: 105px;
+            z-index: -1;
+        }
+    }
+
+    &_text {
+        margin: 80px 0px;
+        white-space: pre-line;
+        font-weight: map-get($font-weights, regular);
+        font-size: 19px;
+    }
+
+    &_button {
+        @include button;
+        margin-right: 190px;
+        margin-bottom: 215px;
+    }
+
+    .login {
+        @include link;
+        font-size: 20px;
+    }
+}
+
+
+.section {
+    padding-top: 60px;
+    @include flexCenter(column);
+
+    background: $backgroundColor;
+
+    &_text {
+        font-size: 60px;
+        font-weight: map-get($font-weights, bold);
+        font-family: 'Source Sans Pro', 'sans-serif';
+        position: relative;
+        z-index: 0;
+
+        &::after {
+            content: "";
+            background-color: $highlightColor;
+            width: 280px;
+            height: 60px;
+            position: absolute;
+            right: 20px;
+            z-index: -1;
+        }
+    }
+
+    &_card {
+        @include flexCenter(row);
+        width: 1120px;
+        height: 350px;
+        background-color: $sectionCardColor;
+        border-radius: 10px;
+        margin: 25px;
+
+        img {
+            width: 500px;
+            height: 300px;
+            margin: 25px;
+            border-radius: 10px;
+        }
+
+        &_right_container {
+            @include flexCenter(column);
+
+            p {
+                color: white;
+            }
+
+            a {
+                @include link
+            }
+        }
+
+        &_heading {
+            font-family: 'Source Sans Pro', 'sans-serif';
+            font-size: 40px;
+            font-weight: map-get($font-weights, medium);
+        }
+
+        &_text {
+            white-space: pre-line;
+            color: #C1C3CD;
+            margin: 25px 100px;
+            font-size: 18px;
+            line-height: 1.4;
+        }
+
+    }
+
+    &_banner {
+        width: 1200px;
+        height: 180px;
+        background-image: $backgroundGradient;
+        border-radius: 10px;
+        top: 85px;
+        position: relative;
+        @include flexCenter(row);
+
+        &_button {
+            @include button;
+            margin-left: 250px;
+        }
+
+        &_heading {
+            font-family: 'Source Sans Pro', 'sans-serif';
+            font-size: 35px;
+            font-weight: map-get($font-weights, bold);
+            position: relative;
+            z-index: 0;
+
+            &::after {
+                content: "";
+                background-color: $highlightColor;
+                width: 75px;
+                height: 45px;
+                position: absolute;
+                right: 260px;
+                bottom: 5px;
+                z-index: -1;
+            }
+        }
+
+        &_text {
+            color: #C1C3CD;
+        }
+    }
+}
+
+.footer {
+    background: $sectionCardColor;
+    height: 300px;
+    padding-top: 160px;
+
+    p,
+    span {
+        color: #C1C3CD;
+    }
+
+    &-wrap {
+        @include flexCenter(row);
+        color: #C1C3CD;
+    }
+
+    &_logo {
+        @include flexCenter(row);
+
+        span {
+            display: block;
+        }
+
+        p {
+            @include flexCenter(column)
+        }
+    }
+
+    &_text {
+        width: 330px;
+        height: 65px;
+        margin: 0px 360px;
+    }
+}
