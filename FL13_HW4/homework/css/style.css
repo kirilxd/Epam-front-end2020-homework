@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #777
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+}
+
+.main-header {
+    text-transform: uppercase;
+    margin-right: 560px;
+}
+
+.navigation-list {
+    list-style: none;
+    display: flex;
+}
+
+.navigation-list-item {
+    margin-right: 35px;
+}
+
+.navigation-list-item a {
+    text-decoration: none;
+}
+
+.navigation-list-item a:hover {
+    color: #bfba55;
+}
+
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/img/home-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 900px;
+    display: flex;
+    justify-content: center;
+}
+
+.header-content-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-header-heading {
+    color: #fff;
+    font-size: 90px;
+}
+
+.secondary-header-heading {
+    color: #bfba55;
+    letter-spacing: 0.1em;
+    margin-top: 15px
+}
+
+.header-button {
+    background: #fff;
+    width: 160px;
+    height: 45px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    margin-top: 50px;
+}
+
+.main-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-post {
+    width: 950px;
+    margin-top: 100px;
+    border-bottom: 0.1px solid #777;
+}
+
+.post-photo {
+    max-width: 100%;
+}
+
+.post-header {
+    color: #000;
+    font-size: 30px;
+    margin-top: 45px;
+}
+
+.post-info {
+    display: flex;
+    align-items: center;
+    margin: 15px 0px;
+}
+
+.avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 30px;
+}
+
+.post-info-element {
+    margin-right: 20px;
+}
+
+.post-button {
+    width: 190px;
+    height: 50px;
+    border-radius: 30px;
+    font-size: 15px;
+    margin: 40px 0px;
+}
+
+.last {
+    border: none;
+}
+
+footer {
+    background: #000;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 90px 450px;
+}
+
+.footer-left-heading {
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.footer-left-info {
+    margin-top: 20px;
+}
+
+.right-section {
+    margin-left: 140px;
+}
+
+.footer-right-heading {
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 20px;
+}
