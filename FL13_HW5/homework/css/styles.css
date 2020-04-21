@@ -1,0 +1,262 @@
+/*
+ * Feel free to change name of colors if you need it
+ * Feel free to add new colors if you need it
+ */
+
+body {
+  font-family: roboto;
+}
+
+.post-1 {
+  background: #f3d250;
+}
+
+.post-2 {
+  background: #8d8741;
+}
+
+.post-3 {
+  background: #659dbd;
+}
+
+.post-4 {
+  background: #daad86;
+}
+
+/* Your styles go here */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: lighter;
+}
+
+body {
+  background: #0b192f;
+}
+
+.main-wrap {
+  margin: 0% 3%;
+}
+
+main {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+header {
+  color: #fff;
+  background: #162b4d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2%;
+  padding-right: 4%;
+}
+
+.hamburger-container {
+  display: none;
+}
+
+.navigation-list {
+  display: flex;
+  list-style: none;
+}
+
+.navigation-element {
+  padding: 30px;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.navigation-element:hover {
+  background: #b8b8b8;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.logo {
+  font-size: 35px;
+}
+
+.span-logo {
+  color: #5f294c;
+}
+
+.posts {
+  width: 70%;
+}
+
+.post {
+  display: flex;
+}
+
+.post:nth-child(odd) {
+  flex-direction: row;
+}
+
+.post:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.post-img {
+  height: 100%;
+  width: 100%;
+}
+
+.post-image-container {
+  width: 50%;
+}
+
+.post-text {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+
+.post-text-container {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.post-header {
+  font-size: 40px;
+}
+
+.post-5 {
+  background-image: url(../img/post5.jpg);
+  height: 450px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.post-date {
+  align-self: flex-start;
+  font-size: 24px;
+  margin: 15px;
+}
+
+.post-date span {
+  font-size: 45px;
+}
+
+.post:nth-child(odd) .post-text {
+  flex-direction: row-reverse;
+}
+
+aside {
+  width: 28%;
+}
+
+.news2 {
+  margin-top: 15px;
+}
+
+.image-news {
+  width: 100%;
+}
+
+.text-news-container {
+  background: #fff;
+  padding: 25px 20px;
+}
+
+.news-button {
+  font-size: 14px;
+  width: 90px;
+  height: 30px;
+  background: #fff;
+  border: 1px solid black;
+  margin-top: 25px;
+  transition: 1s;
+}
+
+.news-button:hover {
+  border: none;
+  border-bottom: 1px solid black;
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: #162b4d;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column-reverse;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .hamburger-container {
+    margin-top: 15px;
+    display: block;
+  }
+
+  .hamburger {
+    width: 35px;
+    height: 2px;
+    background-color: #fff;
+    margin: 8px 0;
+  }
+
+  .logo {
+    margin: 25px 0;
+  }
+
+  .post {
+    flex-direction: column !important;
+  }
+
+  .post-text {
+    flex-direction: column-reverse !important;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .post-date {
+    align-self: auto;
+  }
+
+  .post-image-container {
+    width: auto;
+    height: 100%;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .left-footer {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    flex-direction: column;
+  }
+
+  .posts {
+    width: auto;
+  }
+
+  aside {
+    width: auto;
+  }
+}
